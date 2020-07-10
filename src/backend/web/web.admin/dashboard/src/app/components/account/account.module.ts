@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { AccountRoutingModule } from './account-routing.module';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from 'app/services/auth.service';
-import { MatCardModule, MatButtonModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { StorageService } from 'app/services/storage.service';
 import { MatProgressButtonsModule } from 'mat-progress-buttons';
 

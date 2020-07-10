@@ -1,6 +1,6 @@
 
 # Stage 1
-FROM node:8.11.2-alpine as builder
+FROM node:13.14.0-alpine as builder
 WORKDIR /usr/src/app
 COPY package*.json yarn.lock ./
 RUN yarn
@@ -11,4 +11,4 @@ RUN yarn build --configuration=local-docker --base-href=/dashboard/ --deploy-url
 FROM nginx:alpine
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /usr/src/app/dist/dashboard /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 4200

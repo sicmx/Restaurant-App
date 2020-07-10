@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 import * as uuid from 'uuid';
 import { MatProgressButtonOptions } from 'mat-progress-buttons';
 import { AuthService } from 'app/services/auth.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable, from } from 'rxjs';
 import { switchMap, filter, map, tap } from 'rxjs/operators';
 import { FoodPicture } from 'app/models/foodPicture';

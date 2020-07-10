@@ -44,9 +44,12 @@ services:
     build:
       context: ./web/web.admin/dashboard
       dockerfile: Dockerfile
-      
+  
   pgsql:
     image: postgres:alpine
+    environment:
+      POSTGRES_DB: "db"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
     volumes: 
       - database-data:/var/lib/postgresql/data
     ports: 
